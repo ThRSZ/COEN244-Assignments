@@ -13,7 +13,7 @@
 
 ### - *Execution*
 
-![Invoice-Terminal](Figures/Invoice-Terminal)
+![Invoice-Terminal](COEN244-Assignments/Figures//Invoice-Terminal)
 
 ## **Question**
 
@@ -24,7 +24,7 @@
 
 ### - *Execution*
 
-![Employee-Terminal1](Figures/Employee-Terminal1)
+![Employee-Terminal1](COEN244-Assignments/Figures/Employee-Terminal1)
 
-![Employee-Terminal2](Figures/Employee-Terminal2)
+![Employee-Terminal2](COEN244-Assignments/Figures//Employee-Terminal2)
 
