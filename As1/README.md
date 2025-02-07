@@ -225,7 +225,7 @@ int testSortEmployeeSalary(){
 
 }
 ```
-The function invokes `qsort` on an array of objects, then iterates through a for loop assesing whether the current index's salary is greater than the previous index and less than the next.
+The function invokes `qsort` on an array of objects, then iterates through a for loop by calling the `getSalary()` function and assesing whether the current index's salary is greater than the previous index and less than the next.
 
 ### - *Execution*
 
