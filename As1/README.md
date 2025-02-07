@@ -24,7 +24,7 @@ class Invoice {
 
 ```
 
-The getters and setters were defined as following in the Invoice.cpp file, where the get function returned the data member and the setter passed a pointer to that data member:
+The getters and setters were defined as following in the `Invoice.cpp` file, where the get function returned the data member and the setter passed a pointer to that data member:
 ```
 std::string Invoice::getPartNumber() const {return partNumber;}
 void Invoice::setPartNumber(const std::string &pNumber){
