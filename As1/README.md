@@ -6,10 +6,25 @@
 
 ## **Question 3.10**
 
-This question required the construction of a class `Invoice`, in which multiple 
+This question required the construction of a class `Invoice`, in which multiple data members where designated as private with getters and setters defined as public. The data members were defined as following in the .h file:
 
+```cpp
+class Invoice {
+  public:
 
-Getters and setters 
+    // refer to code to see all data members and functions
+    
+  private:
+    std::string partNumber;
+    std::string partDescription;
+    int quantity;
+    int price;
+
+};
+
+```
+
+The getters and setters were defined as following in the Invoice.cpp file, where the get function returned the data member and the setter passed a pointer to that data member:
 ```
 std::string Invoice::getPartNumber() const {return partNumber;}
 void Invoice::setPartNumber(const std::string &pNumber){
@@ -48,6 +63,7 @@ Invoice::~Invoice(){
 ```
 - **Note:** The text declaring the Invoice was destroid was commented out to clarity of terminal display. 
 
+The following tests were made in the `mainInvoice.cpp` file to test the efficacy of certain functions, namely the clone function, the copy constructor and the `getInvoiceAmount()` function. Each test wast defined as a `bool` value as a simple means of return a basic `true` or `false` conclusion to the respective test. 
 
 ```cpp
 bool invoiceCloneTest(){
@@ -91,7 +107,6 @@ bool invoiceCopyConstructorTest(){
 }
 ```
 
-
 ```cpp
 bool invoiceAmountTest(){
 
@@ -106,6 +121,7 @@ bool invoiceAmountTest(){
 }
 
 ```
+Within the `main()` function three data members of type `int` were defined to keep track of the number of tests called, as well as the passes/fails. Another data member of type `bool` titled `result` was used to store the result of the respective called test. After each test the `testCount` variable was incremented and `passCount` or `failCount` depending on the the return value of `result`. Lastly a `string` titled `message` is assigned "passes!" or "fails!" given the value of `result`.
 
 ```cpp
   int testCount = 0;
