@@ -6,7 +6,7 @@
 
 ## **Question 3.10**
 
-This question required the construction of a class `Invoice`, in which multiple data members where designated as private with getters and setters defined as public. The data members were defined as following in the .h file:
+This question required the construction of a class `Invoice`, in which multiple data members where designated as private with getters and setters defined as public. The data members were defined as following in the `Invoice.h` file:
 
 ```cpp
 class Invoice {
