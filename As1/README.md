@@ -11,9 +11,9 @@
 
 ```
 
-### - **
+### - *Execution*
 
-
+![Invoice-Terminal](Figures/Invoice-Terminal)
 
 ## **Question**
 
@@ -22,7 +22,9 @@
 ```
 
 
-### - **
+### - *Execution*
 
+![Employee-Terminal1](Figures/Employee-Terminal1)
 
+![Employee-Terminal2](Figures/Employee-Terminal2)
 
