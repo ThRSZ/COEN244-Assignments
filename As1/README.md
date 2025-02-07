@@ -4,12 +4,134 @@
  - Thomas Szaktilla (#40065829) - [ThRSZ](https://github.com/ThRSZ)
  - Hao Qi (#40105579) - [hisanip](https://github.com/hisanip)
 
-## **Question**
+## **Question 3.10**
+
+This question required the construction of a class `Invoice`, in which multiple 
+
+
+Getters and setters 
+```
+std::string Invoice::getPartNumber() const {return partNumber;}
+void Invoice::setPartNumber(const std::string &pNumber){
+  partNumber = pNumber;
+}
+```
+
+The default/overloaded/copy constructor and destructor are called in the following way:
+
+```cpp
+//Default Constructor
+Invoice::Invoice() : partNumber(""), partDescription(""), quantity(0), price(0) {}
+
+//Constructor
+Invoice::Invoice(const std::string &pNumber, const std::string &pDesc,
+                 int q, int p):
+  partNumber(pNumber),
+  partDescription(pDesc),
+  quantity(q),
+  price(p) {}
+
+//Copy Constructor
+Invoice::Invoice(const Invoice &other) : 
+  partNumber(other.partNumber), 
+  partDescription(other.partDescription),
+  quantity(other.quantity),
+  price(other.price){
+  //std::cout << "Copy of Invoice was made.\n" << std::endl;
+}
+
+
+//Destructor
+Invoice::~Invoice(){
+  //std::cout << "Invoice has been deleted\n" << std::endl;
+}
+```
+- **Note:** The text declaring the Invoice was destroid was commented out to clarity of terminal display. 
 
 
 ```cpp
+bool invoiceCloneTest(){
+
+  const int SIZE = 5;
+  Invoice accounts[SIZE] = {
+    Invoice(),
+    Invoice("D100", "Drill", 2, 80.00),
+    Invoice("S101", "Screwdriver", 10, 5.00),
+    Invoice("L105", "Level", 5, 15.00),
+    Invoice("L106", "Ladder", 1, 50.00),
+  };
+  
+  for (int i = 0; i < SIZE; ++i) {
+    Invoice clonedInvoice = accounts[i].clone();
+    if(
+      clonedInvoice.getPartNumber() != accounts[i].getPartNumber() ||
+      clonedInvoice.getPartDescription() != accounts[i].getPartDescription() ||
+      clonedInvoice.getQuantity() != accounts[i].getQuantity() ||
+      clonedInvoice.getPrice() != accounts[i].getPrice()){
+        return false;
+      }  
+    }
+  return true;
+}
+```
+
+```cpp
+bool invoiceCopyConstructorTest(){
+
+    Invoice Bill1("C102", "Saw", 1, 100);
+    Invoice copiedInvoice(Bill1);
+    if(
+      copiedInvoice.getPartNumber() != Bill1.getPartNumber() ||
+      copiedInvoice.getPartDescription() != Bill1.getPartDescription() ||
+      copiedInvoice.getQuantity() != Bill1.getQuantity() ||
+      copiedInvoice.getPrice() != Bill1.getPrice()){
+        return false;
+      }  
+  return true;
+}
+```
+
+
+```cpp
+bool invoiceAmountTest(){
+
+    // Same Object Array as invoiceCloneTest
+  
+  for (int i = 0; i < SIZE; ++i) {
+    if(accounts[i].getQuantity() * accounts[i].getPrice() != accounts[i].getInvoiceAmount()){
+        return false;
+      }  
+    }
+  return true;
+}
 
 ```
+
+```cpp
+  int testCount = 0;
+  int failCount = 0;
+  int passCount = 0;
+  
+  std::cout << printInvoice() << std::endl;
+
+  bool result = invoiceAmountTest();
+  testCount++;
+  if (result) {
+    passCount++;
+    //std::cout << 
+  }else {++failCount;}
+  std::string message = result? "passes!":"fails!";
+  //assertion form for calling the unit testing function;
+  std::cout << "The test for Invoice Amount " << message << std::endl;
+
+    // Repeated for every subsequent test
+
+
+  std::cout << passCount << " / " << testCount << " passes." << std::endl;
+  std::cout << failCount << " / " << testCount << " fails." << std::endl;
+```
+This allows the passCount/failCount to iterate based on the result of the given test and return the result to the display.
+
 
 ### - *Execution*
 
