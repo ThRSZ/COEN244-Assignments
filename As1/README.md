@@ -1,4 +1,4 @@
-# COEN 244 Assignment
+# COEN 244 Assignment #1
 
 **Contributors**
  - Thomas Szaktilla (#40065829) - [ThRSZ](https://github.com/ThRSZ)
