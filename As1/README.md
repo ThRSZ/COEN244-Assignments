@@ -13,7 +13,7 @@
 
 ### - *Execution*
 
-![Invoice-Terminal](COEN244-Assignments/Figures//Invoice-Terminal)
+![Invoice-Terminal](https://github.com/ThRSZ/COEN244-Assignments/blob/main/Figures/Invoice-Terminal.png)
 
 ## **Question**
 
@@ -24,7 +24,7 @@
 
 ### - *Execution*
 
-![Employee-Terminal1](COEN244-Assignments/Figures/Employee-Terminal1)
+![Employee-Terminal1](https://github.com/ThRSZ/COEN244-Assignments/blob/main/Figures/Employee-Terminal1.png)
 
-![Employee-Terminal2](COEN244-Assignments/Figures//Employee-Terminal2)
+![Employee-Terminal2](https://github.com/ThRSZ/COEN244-Assignments/blob/main/Figures/Employee-Terminal2.png)
 
